@@ -6,6 +6,8 @@ The JSON-stat format is documented at https://json-stat.org/format/.
 
 The goal of the JSON-stat Javascript Toolkit (JJT) is to help dealing with JSON-stat responses in Javascript.
 
+For **installation** instructions, code **samples**, the **API reference**, etc., see the **[Wiki](https://github.com/badosa/JSON-stat/wiki)**. For a full ES2015 React example, see the [JSON-stat Explorer](https://github.com/badosa/JSON-stat/tree/master/explorer).
+
 For a library of high level functions built on top of JJT, see the [JSON-stat Javascript Utilities Suite](https://github.com/badosa/JSON-stat/tree/master/utils) (JJUS).
 
 ## Design principles
@@ -36,7 +38,7 @@ Generally, items in a collection contain just basic content and a pointer that a
 
 Bundles were packages of unordered arbitrary datasets.
 
-  * *Bundle*
+* *Bundle*
    * *Dataset*
      * *Dimension*
        * *Category*
@@ -77,14 +79,14 @@ JSONstat( { ... } ).length
 //number of datasets in the object
 
 JSONstat( "http://json-stat.org/samples/oecd-canada-col.json" ).length
-//number of items in oecd-canada-col.json. Sync connection.
+//number of items in oecd-canada-col.json. Sync connection. (Not available in the Node.js module.)
 
 JSONstat( "http://json-stat.org/samples/oecd-canada-col.json",
    function(){
       console.log( this.length );
    }
 )
-//number of items in oecd-canada-col.json. Async connection.
+//number of items in oecd-canada-col.json. Async connection. (Not available in the Node.js module.)
 ```
 
 #### Dataset
@@ -180,7 +182,3 @@ JSONstat( j ).Dataset( 1 ).toTable(
 //Get only the female population by age of Canada
 //and convert values from thousands to persons.
 ```
-
-## Further information
-
-For **installation** instructions, code **samples**, the **API reference**, etc., see the **[Wiki](https://github.com/badosa/JSON-stat/wiki)**.
